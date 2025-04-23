@@ -3,49 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmador de Senhas Seguras</title>
+    <title>Gerador de Histórias</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Validador de Senhas</h1>
-        <div class="password-form">
-            <div class="input-group">
-                <label for="password">Digite sua senha:</label>
-                <input type="password" id="password" placeholder="Mínimo 8 caracteres">
-                <div class="password-strength">
-                    <div class="strength-bar"></div>
-                </div>
+        <h1>Gerador de Histórias Curtas</h1>
+        <div class="story-generator">
+            <button id="generate-story" class="btn">Gerar Nova História</button>
+            <div id="story-container" class="story-container hidden">
+                <h2>Sua História Gerada:</h2>
+                <div id="story-content" class="story-content"></div>
+                <button id="copy-story" class="btn small">Copiar História</button>
             </div>
-            
-            <div class="input-group">
-                <label for="confirm-password">Confirme sua senha:</label>
-                <input type="password" id="confirm-password" placeholder="Digite novamente">
-            </div>
-            
-            <div class="requirements">
-                <h3>Requisitos da senha:</h3>
-                <ul>
-                    <li id="length">Mínimo 8 caracteres</li>
-                    <li id="uppercase">Pelo menos 1 letra maiúscula</li>
-                    <li id="lowercase">Pelo menos 1 letra minúscula</li>
-                    <li id="number">Pelo menos 1 número</li>
-                    <li id="special">Pelo menos 1 caractere especial</li>
-                </ul>
-            </div>
-            
-            <button id="generate-password" class="btn">Gerar Senha Aleatória</button>
-            <button id="submit" class="btn" disabled>Confirmar Senha</button>
-            
-            <div id="generated-password" class="hidden">
-                <p>Sua senha gerada: <span id="random-password"></span></p>
-                <button id="copy-password" class="btn small">Copiar Senha</button>
-            </div>
-            
-            <div id="message" class="hidden"></div>
         </div>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
